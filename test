@@ -1,0 +1,654 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width">
+	<title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
+	{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+	<meta name="author" content="luca8link">
+	<link rel="shortcut icon" href="{Favicon}">
+	<link rel="alternate" type="application/rss+xml" href="{RSS}">
+	<link rel="shortcut icon" href="{Favicon}">
+	<meta name="apple-mobile-web-app-capable" content="yes">      
+	<link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
+	<link rel="alternate" type="application/rss+xml" href="{RSS}">
+	<meta name="author" content="luca8link">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+	<link href="http://static.tumblr.com/jrpxrit/YQ0n8wsci/magnific-popup.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://static.tumblr.com/jrpxrit/XXHn8wscf/jquery.magnific-popup.min.js" type="text/javascript"></script>
+			
+			<meta name="if:ShowCover" content="1"/>
+			<meta name="if:ShowAvatar" content="0"/>
+			<meta name="if:noStretch" content="0"/>
+			
+			<meta name="text:Cover Title" content='Welcome to One Pager'/>
+			<meta name="text:Cover Subtitle" content='Your brand new Tumblr Theme'/>
+			<meta name="text:Cover Text" content='One Pager is a responsive Tumblr theme that will place one post for each mouse scroll.'/>
+			<meta name="text:Cover Text" content='One Pager is a responsive Tumblr theme that will place one post for each mouse scroll.'/>
+		       
+			<meta name="color:Background" content="#333"/>
+			<meta name="color:Section Background" content="#333"/>
+			<meta name="color:Buttons Text" content="#EEE"/>
+			<meta name="color:Buttons" content="#1BAEDE"/>
+			<meta name="color:Buttons on Hover" content="#333"/>
+			<meta name="color:Text" content="#EEE"/>
+			<meta name="color:Links" content="#1BAEDE"/>
+			<meta name="color:Links on Hover" content="#FFF"/>
+		    
+           <meta name="select:Title Style" content="caption_style_1" title="1">
+           <meta name="select:Title Style" content="caption_style_2" title="2">
+           <meta name="select:Title Style" content="caption_style_3" title="3">
+           <meta name="select:Title Style" content="caption_style_4" title="4">
+           <meta name="select:Title Style" content="caption_style_5" title="5">
+           <meta name="select:Title Style" content="caption_style_6" title="6">
+
+           <meta name="select:ScrollDirection" content="vertical" title="vertical">
+           <meta name="select:ScrollDirection" content="horizontal" title="horizontal">
+	
+		    <meta name="text:Facebook" content=''/>
+		    <meta name="text:Twitter" content=''/>
+		    <meta name="text:Linkedin" content=''/>
+		    <meta name="text:Vimeo" content=''/>
+		    <meta name="text:Github" content=''/>
+		    <meta name='text:DisqusShortname' content='' />
+		    <meta name='text:FooterInfo' content='' />
+		    
+		    <meta name="text:Google Analytics ID" content=''/>
+	
+			<meta name="image:coverblock" content="" />
+			<meta name="image:textblock" content="" />
+			<meta name="image:quoteblock" content="" />
+			<meta name="image:chatblock" content="" />
+			<meta name="image:linkblock" content="" />
+			<meta name="image:lastblock" content="" />			
+	
+			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+			
+			
+  <script type="text/javascript" src="http://static.tumblr.com/jrpxrit/euRn8yhch/jquery.onepage-scroll.js"></script>
+  <link href='http://static.tumblr.com/jrpxrit/bfLn8wh4o/onepage-scroll.css' rel='stylesheet' type='text/css'>
+  <link href='http://static.tumblr.com/jrpxrit/PNxnjax08/style.min.css' rel='stylesheet' type="text/css">  
+  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">  
+  <style>
+  
+      
+      h1,h2,h3,h4,h5{
+      	font-family: {TitleFont};	
+      	color:	{TitleColor};	
+      	font-weight: {TitleFontWeight};
+      	display: block;
+      }
+      
+      a {
+      	color: {color:Links};
+      	text-decoration: none;
+      	outline: none;
+      	cursor:poiner;
+    	-webkit-transition: all .5s;
+    	-ms-transition: all .3s;
+    	-moz-transition: all .3s;
+    	transition: all .3s;
+      	
+      }
+      
+      a:hover,
+      a:active {
+      	color: {color:Links on Hover};
+      	text-decoration:none;
+    	-webkit-transition: all .5s;
+    	-ms-transition: all .3s;
+    	-moz-transition: all .3s;
+    	transition: all .3s;
+      	
+      }
+      
+      body {
+       	font-family: 'Open Sans', sans-serif;
+        color: {color:Text};
+        background: {color:Background};
+        padding: 0;
+        text-align: center;
+        font-family: 'open sans';
+        position: relative;
+        margin: 0;
+        height: 100%;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      
+      .reload, .btn, .read_more{
+        display: inline-block;
+        border: 4px solid {color:Buttons};
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        background: {color:Buttons};
+        display: inline-block;
+        line-height: 100%;
+        padding: 0.7em;
+        text-decoration: none;
+        color: #fff;
+        line-height: 140%;
+        font-size: 17px;
+        font-family: open sans;
+        font-weight: bold;
+      }
+      
+      .read_more:hover{
+      	background-color: {color:Links on Hover};
+      	border-color:{color:Links on Hover}
+      }
+      
+      .reload:hover{
+        background: #444;
+      }
+      .btn {
+        border: 4px solid {color:Buttons};
+        background: {color:Buttons};
+        color:{color:Buttons Text};
+      }
+      .clear {
+        width: auto;
+      }
+      .btn:hover, .btn:hover {
+        background:{color:Buttons on Hover};
+        border-color:{color:Buttons on Hover};
+      }
+      
+      
+      .main section  {
+        overflow: hidden;
+        background-color: {color:Section Background};
+        background-repeat: no-repeat; 
+        background-size: 100% 100%; 
+        background-position: center;
+      }
+      
+      .pagination a{
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      	color: {color:Buttons};
+      	background:none;
+      	width:50px;
+      	height:50px;
+      	line-height:50px;
+      	font-size:30px;
+      	display:inline-block;
+      	margin:10px;
+      	padding:5px;
+      	-webkit-transition: all .5s;
+      	-ms-transition: all .3s;
+      	-moz-transition: all .3s;
+      	transition: all .3s;
+      	
+      	
+      }
+		.pagination a:hover{
+			color:white;
+			-webkit-transition: all .5s;
+			-ms-transition: all .3s;
+			-moz-transition: all .3s;
+			transition: all .3s;
+			
+		}
+		
+	{Block:ifNoStretch}
+	
+	.main section, .onepage-wrapper .section{
+	 background-size: cover !important;
+	}
+	{/Block:ifNoStretch}
+	
+	
+	
+      {Block:PermalinkPage}
+      
+      .main h1{
+      margin: 10px 0 20px 0;	
+      padding: 0;
+      }
+      
+      {/Block:PermalinkPage}
+      
+      .main h1{
+      	margin-bottom: 20px;
+      }      
+              
+  </style>
+  
+  
+	  <script>
+	  $(window).load(function(){
+	    $('#dvLoading').fadeOut(2000);
+	  });
+	  </script>
+
+
+
+	<script>
+		  $(document).ready(function(){
+	      $(".main").onepage_scroll({
+	        sectionContainer: "section",
+	        loop: true,
+	        direction: "{Select:ScrollDirection}",
+	        responsiveFallback: false
+	      });
+			});
+	
+	</script>
+	
+	
+	
+</head>
+<body>
+<div id="dvLoading"></div>
+
+{block:IndexPage}
+
+  <div class="wrapper">
+	  <div class="main">
+	  
+		  {Block:ifShowCover}
+			  <section id="cover" class="text_cover cover" style="background-image: url({image:coverblock});">
+				<div class="page_container">
+					<h1 class="{Select:Title Style}">
+					{Block:ifShowAvatar}<img src="{PortraitURL-64}" alt="{Title}" /><br/>{/Block:ifShowAvatar}{text:Cover Title}</h1>
+					<h2>{text:Cover Subtitle}</h2>
+					<p>{text:Cover Text}</p>
+				 </div>
+			  </section>
+		  {/Block:ifShowCover}
+	{block:Posts} 
+		
+		{Block:Text}
+		      <section onclick="window.location = '{Permalink}';" class="text_cover" style="background-image: url({image:textblock});">
+		        <div class="page_container">
+		          	<h1 class="{Select:Title Style}">{block:Title}{Title}{/block:Title}</h1>
+		         	{Body}
+		         </div>		  	    
+		      </section>
+		{/Block:Text}
+
+		{Block:Link}
+		      <section style="background-image: url({image:linkblock});">
+		        <div class="page_container">
+		          <h1>{Name}</h1>
+		         <p>{block:Description}{Description}{/block:Description}</p>
+		          
+		  	       <p> <a class="read_more" href="{URL}">{block:Host}{Host}{/block:Host} </a></p>
+		  	    </div>
+		  	    {block:Thumbnail}<img src="{Thumbnail}"> {/block:Thumbnail}		  	    
+		      </section>
+		{/Block:Link}
+		{Block:Quote}
+		      <section onclick="window.location = '{Permalink}';" style="background-image: url({image:quoteblock});">
+		        <div class="page_container">
+		         <blockquote>{Quote}</blockquote>
+		         {block:Source}<h4>{Source}</h4> {/block:Source}
+		  	    </div>
+		      </section>
+		{/Block:Quote}
+		{Block:Chat}
+		      <section onclick="window.location = '{Permalink}';" style="background-image: url({image:chatblock});">
+		        <div class="page_container">
+		         <h1 class="{Select:Title Style}">{block:Title}{Title}{/block:Title}</h1>
+		         <div class="chat">
+		             <ul>
+		                 {block:Lines}<li class="{Alt}">{block:Label} {Label} {/block:Label}{Line}</li>{/block:Lines}
+		             </ul>
+		         </div>
+		         </div>
+		      </section>
+		{/Block:Chat}
+		{Block:Photo}
+		      <section onclick="window.location = '{Permalink}';" style="background-image: url({PhotoURL-HighRes});">
+		          <div class="page_container">
+		          <h1 class="{Select:Title Style}">{block:Caption}{Caption}{/block:Caption}</h1>
+		         </div>
+		      </section>
+	    {/Block:Photo}
+  	    {block:Video}
+	        <section>
+				<div class="video_container">
+							  {Video-700}
+				 </div>
+				  <div class="page_container">
+						 <h1 class="{Select:Title Style}"><a href="{permalink}">{block:Caption}{Caption}{/block:Caption}</h1>
+				  </div>
+	        </section>
+	   {/block:Video}
+	   {block:Audio}
+		   <section>
+				<div class="audio_container" style="background-image:{block:AlbumArt}({AlbumArtURL}){/block:AlbumArt} ;">
+					   <div class="player">{AudioPlayerBlack}</div>
+					   {block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}
+					   <div class="page_container">
+					   <h1 class="{Select:Title Style}"><a href="{Permalink}">{block:Caption}{Caption}{/block:Caption}</a></h1>
+						</div>
+				</div>
+			</section>    
+	   {/block:Audio}
+	   {block:Photoset}
+	         <section onclick="window.location = '{Permalink}';" class="photoset">
+					<div class="page_container popup-gallery">
+						{block:Photos}
+						<a href="{PhotoURL-HighRes}"><img src="{PhotoURL-400}"/></a>
+						{block:Caption}
+						{Caption}
+						{/block:Caption}
+						{/block:Photos} 
+						{block:Caption}
+						<h1 class="{Select:Title Style}">{Caption}</h1>
+						{/block:Caption}
+					</div>
+		   </section> 
+	    {/block:Photoset}	    
+
+	{/block:Posts}
+	  <section style="background-image: url({image:lastblock});">
+
+	  {block:Pagination}
+	  <div class="pagination">      
+	  	<div class="page_container">
+	  	
+	  	
+		  <h1 class="{Select:Title Style}">
+		  
+		  {block:PreviousPage}
+			  <a href="{PreviousPage}"><i class="fa fa-arrow-left"></i></a>
+		  {/block:PreviousPage}	      
+		  {block:NextPage}
+			  <a href="{NextPage}"><i class="fa fa-arrow-right"></i></a>
+		  {/block:NextPage}
+		  
+		  </h1>
+		  
+		  </div>
+	
+		{/block:Pagination}
+	  	
+	  	
+	  	<h1 class="{Select:Title Style}">{Title}</h1>
+	  	<p>{Text:FooterInfo}</p>
+		<div class="social-footer">
+			<ul>
+				{block:IfFacebook}
+				<li><a href="{Text:Facebook}"><i class="fa fa-facebook-square"></a></i></li>
+				{/block:IfFacebook}
+				{block:IfTwitter}
+				<li><a href="{Text:Twitter}"><i class="fa fa-twitter-square"></i></a></li>
+				{/block:IfTwitter}
+				{block:IfInstagram}
+				<li><a href="{Text:Instagram}"><i class="fa fa-instagram"></i></a></li>
+				{/block:IfInstagram}
+				{block:IfLinkedin}
+				<li><a href="{Text:Linkedin}"><i class="fa fa-linkedin-square"></i></a></li>
+				{/block:IfLinkedin}
+				{block:IfVimeo}
+				<li><a href="{Text:Vimeo}"><i class="fa fa-vimeo-square"></i></a></li>
+				{/block:IfVimeo}
+				{block:IfGithub}
+				<li><a href="{Text:Github}"><i class="fa fa-github-square"></i></a></li>
+				{/block:IfGithub}
+			</ul>
+	  	</div>
+	  </section>
+
+	</div>
+</div>
+{/block:IndexPage}
+	
+	    
+{block:PermalinkPage}
+	<div class="wrapper">
+		  <div class="main">
+	
+		{block:Posts} 
+
+			{Block:Text}
+			      <section class="text_cover">
+			        <div class="page_container" style="overflow-y: visible;">
+			          	<h1 class="{Select:Title Style}">{block:Title}{Title}{/block:Title}</h1>
+			         	{Body}
+			         </div>
+			  	    <img src="">
+			      
+			      <div class="background">
+			          <img src="{image:textblock}" class="stretch" alt="" />
+			      </div>
+			      
+			      </section>
+			      
+			{/Block:Text}
+	
+	
+	
+	
+			{Block:Link}
+					<section class="quote_link">
+			          <h1 class="{Select:Title Style}">{Name}</h1>
+			         <p>{block:Description}{Description}{/block:Description}</p>
+			          <div class="btns">
+			  	        <a class="reload btn" href="{URL}">{block:Host}{Host}{/block:Host} </a>
+			  	      </div>
+			  	    </div>
+			  	    {block:Thumbnail}<img src="{Thumbnail}"> {/block:Thumbnail}
+			      <div class="background">
+			          <img src="{image:linkblock}" class="stretch" alt="" />
+			      </div>
+			      
+			      </section>
+			{/Block:Link}
+	
+			{Block:Quote}
+			      <section class="quote_link">
+			        <div class="page_container">
+			         <blockquote>{Quote}</blockquote>
+			         {block:Source}<h4>{Source}</h4> {/block:Source}
+			  	    </div>
+			  	    <div class="background">
+			  	        <img src="{image:quoteblock}" class="stretch" alt="" />
+			  	    </div>
+			  	    
+			      </section>
+			{/Block:Quote}
+			
+			{block:Video}
+			 				
+			                     
+			     <section>
+			                     
+			               <div class="video_container">
+			                     		{Video-700}
+			                </div>
+			                     	
+			                 <div class="page_container">
+			                        
+			                        <h1 class="{Select:Title Style}"><a href="{permalink}">{block:Caption}{Caption}{/block:Caption}</h1>
+			 				</div>
+			 
+			     </section>
+			                
+			{/block:Video}
+			                 
+			{block:Audio}
+			<section>
+			 
+				<div class="audio_container" style="background-image:{block:AlbumArt}({AlbumArtURL}){/block:AlbumArt} ;">
+			    
+				       <div class="player">{AudioPlayerBlack}</div>
+				       {block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}
+				       <div class="page_container">
+				       <h1 class="{Select:Title Style}"><a href="{Permalink}">{block:Caption}{Caption}{/block:Caption}</a></h1>
+						</div>
+				</div>
+				
+				</section>    
+			    
+			{/block:Audio}
+			
+			
+			{Block:Photo}
+			      <section class="photoblock">
+			        <div class="page_container">
+			          <h1 class="{Select:Title Style}">{block:Caption}{Caption}{/block:Caption}</h1>
+			       </div>
+			       <div class="background">
+			           <img src="{PhotoURL-HighRes}" class="stretch" alt="" />
+			       </div>
+			       
+			  	   </section>
+		    {/Block:Photo}
+		    
+		    {Block:Chat}
+		    
+		          <section onclick="window.location = '{Permalink}';" style="background-image: url({image:chatblock});">
+		            <div class="page_container">
+		            
+		             <h1 class="{Select:Title Style}">{block:Title}{Title} {/block:Title}</h1>
+		             
+		             
+		             <div class="chat" style="overflow:visible ;">
+		                 <ul>
+		                     {block:Lines}<li class="{Alt}">{block:Label} {Label} {/block:Label}{Line}</li>{/block:Lines}
+		                 </ul>
+		             </div>
+		             
+		             </div>
+		          </section>
+		    
+		    {/Block:Chat}
+		    
+		    {block:Photoset}
+		         <section class="photoset">
+		           <div class="page_container">
+		         <div class="zoom-gallery">
+			         {block:Photos}
+			             <a href="{PhotoURL-HighRes}" title="{block:Caption}
+			                 {Caption}
+			             {/block:Caption}"><img src="{PhotoURL-400}" /></a>
+			         {/block:Photos} 
+		        </div>
+		        {block:Caption}
+		            <h1 class="{Select:Title Style}">{Caption}</h1>
+		        {/block:Caption}
+		        
+		       </div>
+		       
+		       </section> 
+		       
+			   	<script>
+		       	$(document).ready(function() {
+		       		$('.zoom-gallery').magnificPopup({
+		       			delegate: 'a',
+		       			type: 'image',
+		       			closeOnContentClick: false,
+		       			closeBtnInside: false,
+		       			mainClass: 'mfp-with-zoom mfp-img-mobile',
+		       			image: {
+		       				verticalFit: true,
+		       				titleSrc: function(item) {
+		       					return item.el.attr('title');
+		       				}
+		       			},
+		       			gallery: {
+		       				enabled: true
+		       			},
+		       			zoom: {
+		       				enabled: true,
+		       				duration: 300,
+		       				opener: function(element) {
+		       					return element.find('img');
+		       				}
+		       			}
+		       			
+		       		});
+		       	});
+		       	</script>  
+		    {/block:Photoset}	 
+		    
+		    {block:HasTags}    
+			    <div class="tags">
+				     <h5><i class="icon-tag"></i>	&nbsp;   {TagsAsClasses}</h5>
+				 </div>  
+			{/block:HasTags}     
+			
+			    <ul class="like_and_reblog_buttons">
+			                  <li>{ReblogButton}</li>
+			                  <li>{LikeButton}</li>
+			    </ul>
+		 
+		
+		
+	  	<section style="background-image: url({image:lastblock});">
+			<div class="page_container">
+						{block:PostNotes}{PostNotes} {/block:PostNotes}		
+						{block:IfDisqusShortname}
+							<div id="disqus_thread"></div>
+							<script type="text/javascript">
+							    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+							    var disqus_shortname = '{Text:DisqusShortname}'; // Required - Replace <example> with your forum shortname
+							
+							    /* * * DON'T EDIT BELOW THIS LINE * * */
+							    (function() {
+							        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+							        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+							        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+							    })();
+							</script>
+							<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+							<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</i></a>
+						 {/block:IfDisqusShortname}	
+				 		{/block:Posts} 	
+				 
+				 
+					<h1><a href="/"><i class="fa fa-home"></i></a></h1>
+					<h1>{Title}</h1>
+					<p>{Text:FooterInfo}</p>
+						<div class="social-footer">
+							<ul>
+								{block:IfFacebook}
+								<li><a href="{Text:Facebook}"><i class="fa fa-facebook-square"></a></i></li>
+								{/block:IfFacebook}
+								{block:IfTwitter}
+								<li><a href="{Text:Twitter}"><i class="fa fa-twitter-square"></i></a></li>
+								{/block:IfTwitter}
+								{block:IfInstagram}
+								<li><a href="{Text:Instagram}"><i class="fa fa-instagram"></i></a></li>
+								{/block:IfInstagram}
+								{block:IfLinkedin}
+								<li><a href="{Text:Linkedin}"><i class="fa fa-linkedin-square"></i></a></li>
+								{/block:IfLinkedin}
+								{block:IfVimeo}
+								<li><a href="{Text:Vimeo}"><i class="fa fa-vimeo-square"></i></a></li>
+								{/block:IfVimeo}
+								{block:IfGithub}
+								<li><a href="{Text:Github}"><i class="fa fa-github-square"></i></a></li>
+								{/block:IfGithub}
+							</ul>
+						</div>	
+			</div>
+		</section>
+	
+	</div>
+</div>
+{/block:PermalinkPage}
+
+<div class="back">
+<a  href="/"><i class="fa fa-home"></i></a>
+{block:HasPages}
+	{block:Pages} | <a href="{URL}">{Label}</a>{/block:Pages}
+{/block:HasPages}
+
+{block:AskEnabled} | <a href="/ask">{AskLabel}</a>{/block:AskEnabled}
+
+
+</div>
+
+
+</body>
+</html>
